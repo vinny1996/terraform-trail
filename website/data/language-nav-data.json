@@ -1,5 +1,5 @@
 [
-  { "heading": "Terraform Language" },
+  { "heading": "Write Terraform configuration" },
   { "title": "Overview", "path": "" },
   {
     "title": "Attributes as Blocks - Configuration Language",
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "title": "Files and Directories",
+    "title": "Structure your configuration",
     "routes": [
       { "title": "Overview", "path": "files" },
       { "title": "Override Files", "path": "files/override" },
@@ -70,79 +70,36 @@
     ]
   },
   {
-    "title": "Resources",
+    "title": "Create resources",
     "routes": [
-      { "title": "Overview", "path": "resources" },
-      { "title": "Resource Blocks", "path": "resources/syntax" },
+      { "title": "Overview", "path": "create-resource" },
       {
-        "title": "Resource Behavior",
-        "path": "resources/behavior"
-      },
-      {
-        "title": "Meta-Arguments",
+        "title": "Apply provisioners",
         "routes": [
           {
-            "title": "<code>depends_on</code>",
-            "href": "/language/meta-arguments/depends_on"
+            "title": "Overview",
+            "path": "create-resource/provisioners"
           },
-          {
-            "title": "<code>count</code>",
-            "href": "/language/meta-arguments/count"
-          },
-          {
-            "title": "<code>for_each</code>",
-            "href": "/language/meta-arguments/for_each"
-          },
-          {
-            "title": "<code>provider</code>",
-            "href": "/language/meta-arguments/resource-provider"
-          },
-          {
-            "title": "<code>lifecycle</code>",
-            "href": "/language/meta-arguments/lifecycle"
-          }
-        ]
-      },
-      {
-        "title": "Provisioners",
-        "routes": [
           {
             "title": "Declaring Provisioners",
-            "path": "resources/provisioners/syntax"
+            "path": "create-resource/provisioners/define"
           },
           {
             "title": "Provisioner Connections",
-            "path": "resources/provisioners/connection"
+            "path": "create-resource/provisioners/connect"
           },
           {
-            "title": "Provisioners Without a Resource",
-            "path": "resources/provisioners/null_resource"
-          },
-          {
-            "title": "file",
-            "path": "resources/provisioners/file"
-          },
-          {
-            "title": "local-exec",
-            "path": "resources/provisioners/local-exec"
-          },
-          {
-            "title": "remote-exec",
-            "path": "resources/provisioners/remote-exec"
+            "title": "Run commands on standard lifecycle resources",
+            "path": "create-resource/provisioners/null_resource"
           }
         ]
       },
       {
-        "title": "The <code>terraform_data</code> Resource Type",
-        "path": "resources/terraform-data"
-      },
-      {
-        "title": "Ephemeral Resources",
-        "path": "resources/ephemeral"
+        "title": "Apply standard lifecycle",
+        "path": "create-resource/terraform-data"
       }
     ]
   },
-  { "title": "Data Sources", "path": "data-sources" },
   {
     "title": "Meta-Arguments",
     "hidden": true,
@@ -257,6 +214,18 @@
       }
     ]
   },
+  { "divider": true },
+  { "heading": "Reference"},
+  {
+    "title": "Resource block",
+    "path": "resource"
+  },
+  {
+    "title": "Ephemeral block",
+    "path": "ephemeral"
+  },
+  { "title": "Data block", "path": "data-sources" },
+
   {
     "title": "Moved block",
     "path": "moved"
@@ -264,6 +233,10 @@
   {
     "title": "Terraform block",
     "path": "terraform"
+  },
+  {
+    "title": "Provisioner block",
+    "path": "provisioner"
   },
   {
     "title": "Backend block",
@@ -318,7 +291,7 @@
       }
     ]
   },
-  { "title": "Checks", "path": "checks" },
+  { "title": "Check block", "path": "checks" },
   {
       "title": "Import",
       "routes": [
@@ -356,7 +329,6 @@
         "title": "Splat Expressions",
         "path": "expressions/splat"
       },
-
       {
         "title": "Dynamic Blocks",
         "path": "expressions/dynamic-blocks"
